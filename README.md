@@ -34,8 +34,9 @@ Login page / search box
 Method 1: Manual Testing
 Input box me yeh try karo:
 Copy code
-Sql
-' OR '1'='1 --
+
+Sql ' OR '1'='1 --
+
 Agar:
 Login ho jata hai
 Error aata hai
@@ -46,7 +47,9 @@ Request ko text file me save karo
 Command:
 Copy code
 Bash
+
 sqlmap -r request.txt --dbs
+
 Agar databases list ho jaye ➜ SQL Injection confirmed ✅
 
 🧨 STEP 4: XSS (Cross-Site Scripting) Testing
@@ -54,8 +57,9 @@ Agar databases list ho jaye ➜ SQL Injection confirmed ✅
 Comment box / search field
 Payload try karo:
 Copy code
-Html
-<script>alert('XSS')</script>
+
+Html<script>alert('XSS')</script>
+
 Agar popup aaye ➜ XSS Vulnerability
 Types test karo:
 Reflected XSS
@@ -103,8 +107,9 @@ Location: Login Page
 Impact: Unauthorized database access
 Proof of Concept:
 Copy code
-Sql
-' OR '1'='1 --
+
+Sql ' OR '1'='1 --
+
 Mitigation:
 Prepared statements
 Input validation
