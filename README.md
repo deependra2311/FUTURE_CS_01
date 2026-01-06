@@ -133,3 +133,182 @@ Auth Flaws
 Strong password, MFA
 Session Issues
 Secure cookies
+
+
+
+Web Application Security Testing Report
+
+Internship Track: Cyber Security (CS)
+Task: Task 1 – Web Application Security Testing
+Intern Name: Deependra Mishra
+Organization: Future Interns
+Submission Date:
+
+
+---
+
+1. Objective
+
+The objective of this task is to conduct security testing on a sample web application to identify common web vulnerabilities such as SQL Injection, Cross-Site Scripting (XSS), and Authentication flaws. The task focuses on understanding real-world web application risks and recommending suitable mitigation strategies.
+
+
+---
+
+2. Scope of Testing
+
+The scope of this assessment includes:
+
+Input fields (login, search, forms)
+
+URL parameters
+
+Authentication and session handling mechanisms
+
+Client-side and server-side validation
+
+
+The testing was limited to a sample web application provided for learning and ethical testing purposes.
+
+
+---
+
+3. Tools Used
+
+OWASP ZAP – Automated and manual vulnerability scanning
+
+Burp Suite (Community Edition) – Intercepting and modifying HTTP requests
+
+SQLMap – Testing SQL injection vulnerabilities
+
+Browser Developer Tools – Client-side inspection
+
+
+
+---
+
+4. Methodology
+
+The following methodology was followed during testing:
+
+1. Reconnaissance of the web application
+
+
+2. Identification of input points
+
+
+3. Automated scanning using OWASP ZAP
+
+
+4. Manual testing using Burp Suite
+
+
+5. Validation of vulnerabilities
+
+
+6. Documentation of findings and mitigations
+
+
+
+
+---
+
+5. Vulnerabilities Identified
+
+5.1 SQL Injection
+
+Description: SQL Injection allows attackers to interfere with database queries by injecting malicious SQL code through user input.
+
+Observation: Improper input validation was observed in the login form, allowing SQL payloads to be injected.
+
+Impact:
+
+Unauthorized access to database
+
+Data leakage or modification
+
+
+Mitigation:
+
+Use prepared statements and parameterized queries
+
+Apply server-side input validation
+
+Use ORM frameworks
+
+
+
+---
+
+5.2 Cross-Site Scripting (XSS)
+
+Description: XSS occurs when user input is reflected in responses without proper sanitization.
+
+Observation: Script tags were executed in the browser via form inputs.
+
+Impact:
+
+Session hijacking
+
+Cookie theft
+
+Defacement
+
+
+Mitigation:
+
+Encode output properly
+
+Use Content Security Policy (CSP)
+
+Validate and sanitize user input
+
+
+
+---
+
+5.3 Authentication Flaws
+
+Description: Weak authentication mechanisms can allow attackers to bypass login controls.
+
+Observation:
+
+No account lockout mechanism
+
+Weak password policy
+
+
+Impact:
+
+Brute-force attacks
+
+Unauthorized access
+
+
+Mitigation:
+
+Enforce strong password policies
+
+Implement account lockout after failed attempts
+
+Enable multi-factor authentication
+
+
+
+---
+
+6. Risk Assessment Summary
+
+Vulnerability	Severity
+
+SQL Injection	High
+XSS	Medium
+Authentication Flaws	Medium
+
+
+
+---
+
+7. Conclusion
+
+This task provided hands-on experience in identifying and analyzing common web application vulnerabilities. Proper security controls, secure coding practices, and regular security testing are essential to protect web applications from potential attacks.
+
